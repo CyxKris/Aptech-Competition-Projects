@@ -1,0 +1,1 @@
+# A simple QR Component
