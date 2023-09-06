@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- ?SETTING THE ENCODING FOR THE WEBSITE -->
   <meta charset="UTF-8">
+  <!-- ?ENSURING THE SITE IS RESPONSIVE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ?WEBSITE TITLE -->
   <title>RESULT SUMMARY</title>
+  <!-- ?WEBSITE ICON -->
   <link rel="website icon" href="images/favicon.png" type="image/png">
+  <!-- ?ADDING DOCUMENT FONTS FROM GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <!-- ?LINKING TO THE STYLESHEET -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+  <!-- ?THE MAIN ELEMENT OF THE PAGE -->
   <main>
+    <!-- ?THE RESULT CARD COMPONENT -->
     <article class="card">
+      <!-- ?THE TOP SECTION OF THE CARD -->
       <section class="section top">
         <h2 class="greyed">Your Result</h2>
+        <!-- ?THE CIRCLE DISPLAYING THE RESULT SCORE -->
         <div class="result">
           <span>76</span>
           <span class="greyed">of 100</span>
         </div>
+        <!-- ?THE TEXT AT THE TOP SECTION OF THE CARD -->
         <p class="remark">Great</p>
         <p>You scored higher than 65% of the people who have taken these tests.</p>
       </section>
-
+      <!-- ?THE BOTTOM SECTION OF THE CARD -->
       <section class="section bottom">
         <h2 class="dark-grey">Summary</h2>
+        <!-- ?THE SUMMARY SECTIONS -->
         <section class="summary-breakdown">
           <div class="summary">
             <div class="summary-title">
-              <img class="summary-icon" src="images/icon-reaction.svg" alt="Summary Icon">
-              Reaction
+              <img class="summary-icon" src="images/icon-reaction.svg" alt="Summary Icon">Reaction
             </div>
             <div class="summary-score"><span class="dark-grey">80</span> / 100</div>
           </div>
-
           <div class="summary">
             <div class="summary-title">
-              <img class="summary-icon" src="images/icon-memory.svg" alt="Summary Icon">
-              Memory
+              <img class="summary-icon" src="images/icon-memory.svg" alt="Summary Icon">Memory
             </div>
             <div class="summary-score"><span class="dark-grey">92</span> / 100</div>
           </div>
-
           <div class="summary">
             <div class="summary-title">
-              <img class="summary-icon" src="images/icon-verbal.svg" alt="Summary Icon">
-              Verbal
+              <img class="summary-icon" src="images/icon-verbal.svg" alt="Summary Icon">Verbal
             </div>
             <div class="summary-score"><span class="dark-grey">61</span> / 100</div>
           </div>
-
           <div class="summary">
             <div class="summary-title">
-              <img class="summary-icon" src="images/icon-visual.svg" alt="Summary Icon">
-              Visual
+              <img class="summary-icon" src="images/icon-visual.svg" alt="Summary Icon">Visual
             </div>
             <div class="summary-score"><span class="dark-grey">72</span> / 100</div>
           </div>
         </section>
+        <!-- ?THE BOTTOM SECTION BUTTON -->
         <button>Continue</button>
       </section>
     </article>

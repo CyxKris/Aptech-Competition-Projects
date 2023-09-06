@@ -111,18 +111,26 @@ section.bottom {
     align-items: center;
     gap: .4375rem;
 }
-/* ?SETTING THE BACKGROUND COLOR FOR EACH RESULT COMPONENT */
+.summary-breakdown .summary .summary-score {
+    color: hsla(224, 30%, 27%, 0.5);
+    font-weight: 800;
+}
+/* ?SETTING THE BACKGROUND COLOR AND COLOR FOR EACH RESULT COMPONENT */
 .summary-breakdown .summary:nth-child(1) {
     background-color: var(--light-red);
+    color: hsl(0, 100%, 67%);
 }
 .summary-breakdown .summary:nth-child(2) {
     background-color: var(--orangey-yellow);
+    color: hsl(39, 100%, 56%);
 }
 .summary-breakdown .summary:nth-child(3) {
     background-color: var(--green-teal);
+    color: hsl(166, 100%, 37%);
 }
 .summary-breakdown .summary:nth-child(4) {
     background-color: var(--cobalt-teal);
+    color: hsl(234, 85%, 45%);
 }
 /* ?STYLING THE BUTTON IN THE BOTTOM SECTION OF THE CARD */
 section.bottom button {
