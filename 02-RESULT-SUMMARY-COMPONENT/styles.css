@@ -1,0 +1,167 @@
+/* ?HTML RESET AND SETTING THE FONT FAMILY */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+/* ?CSS COLOR VARIABLES */
+:root {
+    --light-red: hsla(0, 100%, 67%, 0.1);
+    --orangey-yellow: hsla(39, 100%, 56%, 0.1);
+    --green-teal: hsla(166, 100%, 37%, 0.1);
+    --cobalt-teal: hsla(234, 85%, 45%, 0.1);
+    --light-slate-blue: hsl(252, 100%, 67%); /* background gradient */
+    --light-royal-blue: hsl(241, 81%, 54%); /* background gradient */
+    --violet-blue: hsla(256, 72%, 46%, 1); /* circle gradient */
+    --persian-blue: hsla(241, 72%, 46%, 0); /* circle gradient */
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+/* ?FONT SIZE FOR THE PARAGRAPH DIV ELEMENTS */
+p, div {
+    font-size: 18px;
+}
+/* ?STYLING FOR THE MAIN CONTENT OF THE PAGE */
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--white);
+    position: relative;
+}
+/* ?STYLING FOR THE CARD ELEMENT */
+article.card {
+    position: absolute;
+    inset: 0;
+    font-weight: 500;
+}
+/* ?STYLING FOR BOTH SECTIONS OF THE CARD ELEMENT */
+section.section {
+    padding: 1rem;
+}
+/* ?STYLING THE H2 AND SPAN ELEMENTS IN THE TOP SECTION WITH THE CLASS OF 'GREYED' */
+section.section .greyed {
+    color: var(--light-lavender);
+}
+/* ?STYLING THE H2 AND SPAN ELEMENTS IN THE BOTTOM SECTION WITH THE CLASS OF 'DARK-GREY' */
+section.section .dark-grey {
+    font-weight: 700;
+    color: var(--dark-gray-blue);
+}
+/* ?STYLING THE TOP SECTION OF THE CARD ELEMENT */
+section.top {
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    min-height: 40%;
+    text-align: center;
+    color: var(--pale-blue);
+    padding: 2rem 2rem 2.5rem;
+}
+/* ?STYLING THE CIRCLE IN THE TOP SECTION THAT HOLDS THE RESULT SCORE */
+section.top .result {
+    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    aspect-ratio: 1 / 1;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 50%;
+}
+/* ?MAKING SURE EACH NUMBER SPAN IN THE CIRCLE TAKES THE FULL WIDTH */
+section.top .result span {
+    display: block;
+}
+/* ?STYLING THE LARGE NUMBER SPAN IN THE CIRCLE */
+section.top .result span:nth-child(1) {
+    font-size: 3rem;
+    font-weight: 800;
+}
+/* ?STYLING THE REMARK IN THE TOP SECTION OF THE CARD */
+section.top .remark {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+/* ?STYLING THE BOTTOM SECTION OF THE CARD */
+section.bottom {
+    min-height: 60%;
+}
+/* ?STYLING THE SECTION THAT HOLDS THE DIFFERENT RESULT COMPONENTS */
+.summary-breakdown {
+    display: grid;
+    gap: 1rem;
+    margin-block: 1.25rem;
+}
+/* ?STYLING EACH RESULT COMPONENT IN THE SUMMARY-BREAKDOWN SECTION */
+.summary-breakdown .summary {
+    display: flex;
+    justify-content: space-between;
+    border-radius: .75rem;
+    padding: 1rem;
+}
+/* ?STYLING THE TITLES OF EACH RESULT COMPONENT */
+.summary-breakdown .summary .summary-title {
+    display: flex;
+    align-items: center;
+    gap: .4375rem;
+}
+/* ?SETTING THE BACKGROUND COLOR FOR EACH RESULT COMPONENT */
+.summary-breakdown .summary:nth-child(1) {
+    background-color: var(--light-red);
+}
+.summary-breakdown .summary:nth-child(2) {
+    background-color: var(--orangey-yellow);
+}
+.summary-breakdown .summary:nth-child(3) {
+    background-color: var(--green-teal);
+}
+.summary-breakdown .summary:nth-child(4) {
+    background-color: var(--cobalt-teal);
+}
+/* ?STYLING THE BUTTON IN THE BOTTOM SECTION OF THE CARD */
+section.bottom button {
+    width: 100%;
+    background-color: var(--dark-gray-blue);
+    color: var(--pale-blue);
+    font-size: 1.125rem;
+    padding-block: 1rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+/* ?SETTING THE STYLE OF THE BUTTON WHEN IT'S CLICKED ON */
+section.bottom button:active {
+    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+/* ?MAKING THE DESIGN RESPONSIVE FOR TABLET & DESKTOP SCREENS */
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    article.card {
+        position: static;
+        display: flex;
+        border-radius: 1.5rem;
+        margin-inline: 1.5rem;
+        max-width: 800px;
+        box-shadow:
+            15px 15px 22px -1px rgba(0, 0, 0, 0.08)
+        ;
+    }
+    section.section {
+        width: 50%;
+        padding: 2rem;
+    }
+    section.top {
+        border-radius: 1.5rem;
+    }
+}
