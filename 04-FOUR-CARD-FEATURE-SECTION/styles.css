@@ -5,3 +5,83 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+/* ?PROJECT COLORS */
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    /* NEUTRAL */
+    --dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98% );
+}
+/* ?DOCUMENT DEFAULT FONT SIZE */
+html {
+    font-size: 15px;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--light-gray);
+    color: var(--grayish-blue);
+    padding: 5rem 2rem;
+}
+
+h1, h2 {
+    text-align: center;
+    line-height: 1.1;
+}
+
+h1 {
+    font-weight: 200;
+    margin-bottom: .625rem;
+    color: var(--dark-blue);
+}
+
+h1 span, h3 {
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+h2 {
+    font-weight: 400;
+}
+
+/* ?STYLING THE CARDS SECTION */
+section.cards {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.card {
+    border-radius: .625rem;
+    box-shadow:
+        0.6px 1.9px 4.4px rgba(0, 0, 0, 0.075),
+        5px 15px 35px rgba(0, 0, 0, 0.15)
+    ;
+    padding: 2rem;
+}
+
+.card:nth-child(1) {
+    border-top: solid 4px var(--cyan);
+}
+.card:nth-child(2) {
+    border-top: solid 4px var(--red);
+}
+.card:nth-child(3) {
+    border-top: solid 4px var(--orange);
+}
+.card:nth-child(4) {
+    border-top: solid 4px var(--blue);
+}
+
+.card-description {
+    margin-bottom: 2rem;
+}
+
+.card-image {
+    float: right;
+}
