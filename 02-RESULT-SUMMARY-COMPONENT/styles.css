@@ -5,21 +5,6 @@
     box-sizing: border-box;
     font-family: 'Hanken Grotesk', sans-serif;
 }
-/* ?CSS COLOR VARIABLES */
-:root {
-    --light-red: hsla(0, 100%, 67%, 0.1);
-    --orangey-yellow: hsla(39, 100%, 56%, 0.1);
-    --green-teal: hsla(166, 100%, 37%, 0.1);
-    --cobalt-teal: hsla(234, 85%, 45%, 0.1);
-    --light-slate-blue: hsl(252, 100%, 67%); /* background gradient */
-    --light-royal-blue: hsl(241, 81%, 54%); /* background gradient */
-    --violet-blue: hsla(256, 72%, 46%, 1); /* circle gradient */
-    --persian-blue: hsla(241, 72%, 46%, 0); /* circle gradient */
-    --white: hsl(0, 0%, 100%);
-    --pale-blue: hsl(221, 100%, 96%);
-    --light-lavender: hsl(241, 100%, 89%);
-    --dark-gray-blue: hsl(224, 30%, 27%);
-}
 /* ?FONT SIZE FOR THE PARAGRAPH DIV ELEMENTS */
 p, div {
     font-size: 18px;
@@ -28,7 +13,7 @@ p, div {
 main {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--white);
+    background-color: hsl(0, 0%, 100%);
     position: relative;
 }
 /* ?STYLING FOR THE CARD ELEMENT */
@@ -43,26 +28,26 @@ section.section {
 }
 /* ?STYLING THE H2 AND SPAN ELEMENTS IN THE TOP SECTION WITH THE CLASS OF 'GREYED' */
 section.section .greyed {
-    color: var(--light-lavender);
+    color: hsl(241, 100%, 89%);
 }
 /* ?STYLING THE H2 AND SPAN ELEMENTS IN THE BOTTOM SECTION WITH THE CLASS OF 'DARK-GREY' */
 section.section .dark-grey {
     font-weight: 700;
-    color: var(--dark-gray-blue);
+    color: hsl(224, 30%, 27%);
 }
 /* ?STYLING THE TOP SECTION OF THE CARD ELEMENT */
 section.top {
-    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
     min-height: 40%;
     text-align: center;
-    color: var(--pale-blue);
+    color: hsl(221, 100%, 96%);
     padding: 2rem 2rem 2.5rem;
 }
 /* ?STYLING THE CIRCLE IN THE TOP SECTION THAT HOLDS THE RESULT SCORE */
 section.top .result {
-    background: linear-gradient(var(--violet-blue), var(--persian-blue));
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,26 +102,26 @@ section.bottom {
 }
 /* ?SETTING THE BACKGROUND COLOR AND COLOR FOR EACH RESULT COMPONENT */
 .summary-breakdown .summary:nth-child(1) {
-    background-color: var(--light-red);
+    background-color: hsla(0, 100%, 67%, 0.1);
     color: hsl(0, 100%, 67%);
 }
 .summary-breakdown .summary:nth-child(2) {
-    background-color: var(--orangey-yellow);
+    background-color: hsla(39, 100%, 56%, 0.1);
     color: hsl(39, 100%, 56%);
 }
 .summary-breakdown .summary:nth-child(3) {
-    background-color: var(--green-teal);
+    background-color: hsla(166, 100%, 37%, 0.1);
     color: hsl(166, 100%, 37%);
 }
 .summary-breakdown .summary:nth-child(4) {
-    background-color: var(--cobalt-teal);
+    background-color: hsla(234, 85%, 45%, 0.1);
     color: hsl(234, 85%, 45%);
 }
 /* ?STYLING THE BUTTON IN THE BOTTOM SECTION OF THE CARD */
 section.bottom button {
     width: 100%;
-    background-color: var(--dark-gray-blue);
-    color: var(--pale-blue);
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(221, 100%, 96%);
     font-size: 1.125rem;
     padding-block: 1rem;
     border-radius: 2rem;
@@ -146,7 +131,7 @@ section.bottom button {
 }
 /* ?SETTING THE STYLE OF THE BUTTON WHEN IT'S CLICKED ON */
 section.bottom button:active {
-    background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 /* ?MAKING THE DESIGN RESPONSIVE FOR TABLET & DESKTOP SCREENS */
 @media (min-width: 768px) {
