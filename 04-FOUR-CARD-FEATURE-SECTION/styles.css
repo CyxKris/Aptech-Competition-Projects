@@ -5,57 +5,46 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-/* ?PROJECT COLORS */
-:root {
-    --red: hsl(0, 78%, 62%);
-    --cyan: hsl(180, 62%, 55%);
-    --orange: hsl(34, 97%, 64%);
-    --blue: hsl(212, 86%, 64%);
-    /* NEUTRAL */
-    --dark-blue: hsl(234, 12%, 34%);
-    --grayish-blue: hsl(229, 6%, 66%);
-    --light-gray: hsl(0, 0%, 98% );
-}
 /* ?DOCUMENT DEFAULT FONT SIZE */
 html {
     font-size: 15px;
 }
-
+/* ?STYLING THE MAIN SECTION OF THE PAGE */
 main {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--light-gray);
-    color: var(--grayish-blue);
+    background-color: hsl(0, 0%, 98% );
+    color: hsl(229, 6%, 66%);
     padding: 5rem 2rem;
 }
-
+/* ?STYLING THE HEADERS */
 h1, h2 {
     text-align: center;
-    line-height: 1.1;
+    line-height: 1.2;
 }
-
 h1 {
     font-weight: 200;
-    margin-bottom: .625rem;
-    color: var(--dark-blue);
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    color: hsl(234, 12%, 34%);
 }
-
 h1 span, h3 {
     font-weight: 600;
-    color: var(--dark-blue);
+    color: hsl(234, 12%, 34%);
 }
-
 h2 {
     font-weight: 400;
+    font-size: 1.125rem;
 }
-
 /* ?STYLING THE CARDS SECTION */
 section.cards {
-    margin-top: 4rem;
+    margin-top: 4.5rem;
+}
+section.cards, .middle-cards {
     display: grid;
     gap: 2rem;
 }
-
+/* ?STYLING EACH INDIVIDUAL CARD IN THE CARDS SECTION */
 .card {
     border-radius: .625rem;
     box-shadow:
@@ -64,24 +53,56 @@ section.cards {
     ;
     padding: 2rem;
 }
-
-.card:nth-child(1) {
-    border-top: solid 4px var(--cyan);
-}
-.card:nth-child(2) {
-    border-top: solid 4px var(--red);
-}
-.card:nth-child(3) {
-    border-top: solid 4px var(--orange);
-}
-.card:nth-child(4) {
-    border-top: solid 4px var(--blue);
-}
-
 .card-description {
     margin-bottom: 2rem;
 }
-
 .card-image {
     float: right;
+}
+/* ?STYLING THE BORDER FOR EACH CARD */
+.card:nth-child(1) {
+    border-top: solid 4px hsl(180, 62%, 55%);
+}
+.middle-cards .card:nth-child(1) {
+    border-top: solid 4px hsl(0, 78%, 62%);
+}
+.middle-cards .card:nth-child(2) {
+    border-top: solid 4px hsl(34, 97%, 64%);
+}
+.card:nth-child(3) {
+    border-top: solid 4px hsl(212, 86%, 64%);
+}
+/* ?MAKING THE DESIGN RESPONSIVE */
+/* TABLET SCREENS */
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        flex-direction: column;
+    }
+    h1, h2 {
+        max-width: 50%;
+    }
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+}
+/* DESKTOP SCREENS */
+@media (min-width: 1024px) {
+    section.cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section.cards {
+        max-width: 90%;
+    }
+    .card, .middle-cards {
+        flex: 1;
+        width: 350px;
+    }
 }
