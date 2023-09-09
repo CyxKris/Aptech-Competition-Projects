@@ -5,22 +5,14 @@
     box-sizing: border-box;
     font-family: 'League Spartan', sans-serif;
 }
-/* ?DOCUMENT COLORS */
-:root {
-    --very-dark-magenta: hsl(300, 43%, 22%);
-    --soft-pink: hsl(333, 80%, 67%);
-    --dark-grayish-magenta: hsl(300, 10%, 53%);
-    --light-grayish-magenta: hsl(300, 24%, 96%);
-    --white: hsl(0, 0%, 100%);
-}
 /* ?SETTING THE FONT SIZE OF THE DOCUMENT */
 html {
     font-size: 15px;
 }
 /* ?STYLING THE MAIN SECTION OF THE PAGE */
 main {
-    background-color: var(--white);
-    color: var(--white);
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 100%);
     padding: 4rem 2rem 5rem;
     font-weight: 500;
     width: 100%;
@@ -28,29 +20,28 @@ main {
     min-height: 100vh;
     margin-inline: auto;
 }
+/* ?STYLING THE H1 AND OTHER TEXT ELEMENTS WITH THE DARK MAGENTA COLOR */
 .purple-text {
-    color: var(--very-dark-magenta);
+    color: hsl(300, 43%, 22%);
 }
-
+/* ?STYLING THE HEADING SECTION */
 section.heading {
     text-align: center;
     display: flex;
     flex-direction: column;
 }
-
-section.heading h1 {
+section.heading-text h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
-
-section.heading p {
-    color: var(--dark-grayish-magenta);
+section.heading-text p {
+    color: hsl(300, 10%, 53%);
+    font-size: 1.1rem;
 }
-
-section.heading p, .review-content {
+section.heading-text p, .review-content {
     line-height: 1.5;
 }
-
+/* ?STYLING THE STAR REVIEWS AND REVIEWS SECTION */
 section.star-reviews, section.reviews {
     display: flex;
     flex-direction: column;
@@ -61,40 +52,37 @@ section.star-reviews, section.reviews {
 .star-rating {
     margin-bottom: .625rem;
 }
-
+/* STYLES FOR EACH STAR REVIEW COMPONENT */
 .star-review {
     border-radius: 6px;
-    background-color: var(--light-grayish-magenta);
+    background-color: hsl(300, 24%, 96%);
     padding-block: 1rem;
 }
 /* ?STYLING THE REVIEWS SECTION */
 .review {
-    background-color: var(--very-dark-magenta);
+    background-color: hsl(300, 43%, 22%);
     padding: 2rem;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
 }
-
+/* THE HEADING CONTAINING THE IMAGE AND NAME */
 .review-heading {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-
 .review-heading img {
     border-radius: 50%;
     width: 40px;
 }
-
 .review-heading p {
-    color: var(--soft-pink);
+    color: hsl(333, 80%, 67%);
     font-weight: 400;
 }
-
 /* ?MAKING THE DESIGN RESPONSIVE */
-@media (min-width: 1024px) {
+@media (min-width: 900px) {
     main {
         padding: 6rem 2rem;
     }
@@ -105,10 +93,10 @@ section.star-reviews, section.reviews {
         gap: 10rem;
         text-align: start;
     }
-    .heading-text {
-        max-width: 40ch;
+    section.heading-text {
+        max-width: 45ch;
     }
-    section.heading h1 {
+    section.heading-text h1 {
         font-size: 3rem;
     }
     section.heading > section {
@@ -143,6 +131,7 @@ section.star-reviews, section.reviews {
         transform: translateY(2rem);
     }
 }
+/* ?REMOVING THE INLINE PADDING FOR DESKTOP SCREENS */
 @media (min-width: 1201px) {
     main {
         padding-inline: 0;
