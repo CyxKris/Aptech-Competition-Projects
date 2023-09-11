@@ -3,18 +3,93 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
 }
-
-/* ?DOCUMENT COLORS */
-:root {
-    --bright-orange: hsl(31, 77%, 52%);
-    --dark-cyan: hsl(184, 100%, 22%);
-    --very-dark-cyan: hsl(179, 100%, 13%);
-    --transparent-white: hsla(0, 0%, 100%, 0.75); /* Paragraphs */
-    --very-light-gray: hsl(0, 0%, 95%); /* Backgrounds, headings, buttons */
-}
-
-/* ?SETTING THE FONT SIZE */
+/* ?SETTING THE FONT SIZE, BACKGROUND COLOR AND MARGINS OF THE HTML, BODY AND MAIN ELEMENT */
 html {
     font-size: 15px;
+}
+body {
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+main {
+    margin: 3rem 1rem;
+}
+/* ?STYLING EACH CARD ELEMENT */
+section.card {
+    padding: 3rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+/* ?STYLING THE HEADING OF EACH CARD */
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    margin-block: 2rem;
+    font-size: 2rem;
+    color: hsl(0, 0%, 95%);
+}
+/* ?STYLING THE PARAGRAPHS IN EACH CARD */
+p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    max-width: 25ch;
+}
+/* ?STYLING THE BUTTONS IN EACH CARD */
+button {
+    padding: .5rem 1rem;
+    border: 2px solid hsl(0, 0%, 95%);
+    border-radius: 2rem;
+    background-color: hsl(0, 0%, 95%);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+button:is(:active, :hover) {
+    background-color: inherit;
+    color: hsl(0, 0%, 95%) !important;
+}
+/* ?STYLING THE FIRST CARD ELEMENT AND ITS BUTTON */
+section.card:nth-child(1) {
+    background-color: hsl(31, 77%, 52%);
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+}
+section.card:nth-child(1) button {
+    color: hsl(31, 77%, 52%);
+}
+/* ?STYLING THE SECOND CARD ELEMENT AND ITS BUTTON */
+section.card:nth-child(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+section.card:nth-child(2) button {
+    color: hsl(184, 100%, 22%);
+}
+/* ?STYLING THE THIRD CARD ELEMENT AND ITS BUTTON */
+section.card:nth-child(3) {
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+section.card:nth-child(3) button {
+    color: hsl(179, 100%, 13%);
+}
+/* ?MAKING THE DESIGN RESPONSIVE FOR TABLET AND DESKTOP SCREENS */
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        display: flex;
+    }
+    section.card:nth-child(1) {
+        border-radius: 0;
+        border-top-left-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+    }
+    section.card:nth-child(3) {
+        border-radius: 0;
+        border-top-right-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+    }
 }
