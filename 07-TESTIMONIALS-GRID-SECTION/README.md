@@ -1,1 +1,1 @@
-# The seventh project
+# A simple testimonials grid section.
