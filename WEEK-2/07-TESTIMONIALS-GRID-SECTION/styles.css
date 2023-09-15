@@ -1,0 +1,127 @@
+/* ?HTML RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+/* ?DOCUMENT COLOR */
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    /* NOTES: 'verified graduate' as the same color as the person's name with 50% opacity */
+    /* review paragraphs inside teh quotation have the same color as well, but are at 70% opacity */
+}
+/* ?SETTING THE FONT SIZE OF THE DOCUMENT */
+html {
+    font-size: 13px;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--light-grayish-blue);
+}
+main {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+section.testimonial {
+    padding: 2rem;
+    border-radius: 10px;
+}
+section.testimonial.white {
+    color: var(--light-gray);
+}
+section.testimonial.gray {
+    color: var(--dark-grayish-blue);
+}
+
+section.testimonial:nth-child(1) {
+    background-color: var(--moderate-violet);
+    position: relative;
+}
+
+section.testimonial:nth-child(1) .quote-image {
+    position: absolute;
+    inset: 0 2rem auto auto;
+    z-index: 0;
+}
+section.testimonial:nth-child(1) :is(.testimonial-heading, .testimonial-title, .testimonial-content) {
+    position: relative;
+    z-index: 1;
+}
+
+section.testimonial:nth-child(2) {
+    background-color: var(--very-dark-grayish-blue);
+}
+
+section.testimonial:nth-child(3), section.testimonial:nth-child(5) {
+    background-color: var(--white);
+}
+
+section.testimonial:nth-child(4) {
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.testimonial-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-heading img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.testimonial-heading p {
+    opacity: .5;
+}
+
+.testimonial-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-block: 1.5rem;
+}
+
+.testimonial-content {
+    line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        max-width: 80%;
+    }
+    section.testimonial {
+        grid-row: span 1;
+    }
+    section.testimonial:nth-child(1) {
+        grid-column: span 2;
+    }
+    section.testimonial:nth-child(1) .quote-image {
+        inset: 0 5rem auto auto;
+    }
+    section.testimonial:nth-child(3) {
+        grid-column: 1 / 2;
+    }
+    section.testimonial:nth-child(4) {
+        grid-column: span 2;
+    }
+    section.testimonial:nth-child(5) {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+    }
+}
