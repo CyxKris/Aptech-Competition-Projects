@@ -1,0 +1,10 @@
+/* ?HTML RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ?SETTING DOCUMENT FONT-SIZE */
+html {
+    font-size: 15px;
+}
