@@ -1,0 +1,20 @@
+/* ?HTML RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+/* ?DOCUMENT COLORS */
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue1: hsl(217, 54%, 11%); /* Main Background */
+    --very-dark-blue2: hsl(216, 50%, 16%); /* Card Background */
+    --very-dark-blue3: hsl(215, 32%, 27%); /* Line */
+    --white: hsl(0, 0%, 100%);
+}
+/* ?SETTING THE FONT SIZE */
+html {
+    font-size: 18px;
+}
