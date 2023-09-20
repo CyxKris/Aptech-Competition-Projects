@@ -22,9 +22,7 @@ body {
     background-color: var(--very-dark-blue1);
     width: 100%;
     min-height: 100vh;
-    display: flex;
     justify-content: center;
-    align-items: center;
 }
 /* ?STYLING THE NFT CARD */
 main {
@@ -32,10 +30,17 @@ main {
     border-radius: 1rem;
     padding: 1rem;
     margin: 4rem 1rem;
+    max-width: 350px;
 }
 /* ?DEFINING THE STYLES FOR DIFFERENT TEXT COLORS */
 .text-white {
     color: var(--white);
+    cursor: pointer;
+    transition: .3s ease;
+    /* ?STYLING FOR WHEN THE TEXT IS HOVERED OVER */
+    &:hover {
+        color: var(--cyan);
+    }
 }
 .text-blue {
     color: var(--soft-blue);
@@ -52,14 +57,37 @@ main {
 .text-600 {
     font-weight: 600;
 }
+.flex {
+    display: flex;
+    align-items: center;
+}
 /* ?STYLING THE SECTION OF THE CARD THAT HOLDS THE MAIN IMAGE */
 section.card-image {
     border-radius: 10px;
     height: 55%;
+    position: relative;
+    cursor: pointer;
+    justify-content: center;
 }
-section.card-image img {
+section.card-image > .equilibrium-image {
     border-radius: 10px;
     width: 100%;
+    height: 100%;
+}
+section.card-image > .icon-image {
+    position: absolute;
+}
+section.card-image > div {
+    border-radius: 10px;
+    position: absolute;
+    inset: 0;
+    background-color: var(--cyan);
+    opacity: 0;
+    transition: .3s ease;
+    /* ?STYLING FOR WHEN THE DIV IS HOVERED OVER */
+    &:hover {
+        opacity: .5;
+    }
 }
 /* ?STYLING THE SECTION OF THE CARD THAT HOLDS THE TEXT CONTENT */
 section.card-content {
@@ -73,18 +101,12 @@ section.card-content > p {
 }
 section.card-content .card-price {
     margin-block: .89rem .56rem;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 section.card-content .card-price p {
-    display: flex;
     gap: 5px;
-    align-items: center;
 }
 section.card-content .card-person {
-    display: flex;
-    align-items: center;
     gap: 1rem;
     border-top: 1px solid var(--very-dark-blue3);
     padding-top: .89rem;
@@ -94,4 +116,10 @@ section.card-content .card-person img {
     border: 1px solid var(--white);
     width: 30px;
     aspect-ratio: 1 / 1;
+}
+/* ?MAKING THE DESIGN RESPONSIVE */
+@media (min-width: 768px) {
+    main {
+        margin: 0;
+    }
 }
