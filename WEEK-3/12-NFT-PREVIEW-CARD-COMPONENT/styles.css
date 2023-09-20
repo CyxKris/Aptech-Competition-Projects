@@ -14,7 +14,84 @@
     --very-dark-blue3: hsl(215, 32%, 27%); /* Line */
     --white: hsl(0, 0%, 100%);
 }
-/* ?SETTING THE FONT SIZE */
+/* ?SETTING THE FONT SIZE & STYLING THE DOCUMENT'S BODY */
 html {
     font-size: 18px;
+}
+body {
+    background-color: var(--very-dark-blue1);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ?STYLING THE NFT CARD */
+main {
+    background-color: var(--very-dark-blue2);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 4rem 1rem;
+}
+/* ?DEFINING THE STYLES FOR DIFFERENT TEXT COLORS */
+.text-white {
+    color: var(--white);
+}
+.text-blue {
+    color: var(--soft-blue);
+}
+.text-cyan {
+    color: var(--cyan);
+}
+.text-300 {
+    font-weight: 300;
+}
+.text-400 {
+    font-weight: 400;
+}
+.text-600 {
+    font-weight: 600;
+}
+/* ?STYLING THE SECTION OF THE CARD THAT HOLDS THE MAIN IMAGE */
+section.card-image {
+    border-radius: 10px;
+    height: 55%;
+}
+section.card-image img {
+    border-radius: 10px;
+    width: 100%;
+}
+/* ?STYLING THE SECTION OF THE CARD THAT HOLDS THE TEXT CONTENT */
+section.card-content {
+    height: 45%;
+}
+section.card-content h1 {
+    margin-block: 1rem;
+}
+section.card-content > p {
+    line-height: 1.5;
+}
+section.card-content .card-price {
+    margin-block: .89rem .56rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.card-content .card-price p {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+section.card-content .card-person {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid var(--very-dark-blue3);
+    padding-top: .89rem;
+}
+section.card-content .card-person img {
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    width: 30px;
+    aspect-ratio: 1 / 1;
 }
