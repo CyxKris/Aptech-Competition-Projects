@@ -72,6 +72,7 @@ section.card-image {
     position: relative;
     cursor: pointer;
     justify-content: center;
+    /* ?MAKING THE ICON IMAGE VISIBLE WHEN THE IMAGE IS HOVERED OVER OR CLICKED */
     &:hover > .icon-image,
     &:active > .icon-image {
         visibility: visible;
@@ -94,7 +95,7 @@ section.card-image > div {
     background-color: var(--cyan);
     opacity: 0;
     transition: .3s ease;
-    /* ?STYLING FOR WHEN THE DIV IS HOVERED OVER */
+    /* ?STYLING FOR WHEN THE DIV IS HOVERED OVER & CLICKED */
     &:hover,
     &:active {
         opacity: .5;
