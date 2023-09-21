@@ -31,6 +31,9 @@ main {
     padding: 1rem;
     margin: 4rem 1rem;
     max-width: 350px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, 
+                rgba(17, 17, 26, 0.1) 0px 16px 56px, 
+                rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 /* ?DEFINING THE STYLES FOR DIFFERENT TEXT COLORS */
 .text-white {
@@ -38,7 +41,8 @@ main {
     cursor: pointer;
     transition: .3s ease;
     /* ?STYLING FOR WHEN THE TEXT IS HOVERED OVER */
-    &:hover {
+    &:hover,
+    &:active {
         color: var(--cyan);
     }
 }
@@ -68,6 +72,10 @@ section.card-image {
     position: relative;
     cursor: pointer;
     justify-content: center;
+    &:hover > .icon-image,
+    &:active > .icon-image {
+        visibility: visible;
+    }
 }
 section.card-image > .equilibrium-image {
     border-radius: 10px;
@@ -76,6 +84,8 @@ section.card-image > .equilibrium-image {
 }
 section.card-image > .icon-image {
     position: absolute;
+    visibility: hidden;
+    transition: .1s ease;
 }
 section.card-image > div {
     border-radius: 10px;
@@ -85,7 +95,8 @@ section.card-image > div {
     opacity: 0;
     transition: .3s ease;
     /* ?STYLING FOR WHEN THE DIV IS HOVERED OVER */
-    &:hover {
+    &:hover,
+    &:active {
         opacity: .5;
     }
 }
