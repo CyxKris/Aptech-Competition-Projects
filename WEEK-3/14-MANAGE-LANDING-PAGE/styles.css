@@ -3,4 +3,253 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+/* ?DOCUMENT COLORS */
+:root {
+    /* PRIMARY */
+    --bright-red: hsl(12, 88%, 59%);
+    --dark-blue: hsl(228, 39%, 23%);
+    /* NEUTRAL */
+    --dark-grayish-blue: hsl(227, 12%, 61%);
+    --very-dark-blue: hsl(233, 12%, 13%);
+    --very-pale-red: hsl(13, 100%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+/* ?STYLING THE BODY */
+body {
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: var(--very-light-gray); */
+    overflow-x: hidden;
+}
+/* ?COLORS FOR THE H1 AND H2 ELEMENTS */
+h1, h2, h3, p.name {
+    color: var(--dark-blue);
+}
+h2 {
+    font-size: clamp(1.9rem, 4vh, 3rem);
+}
+p {
+    color: var(--dark-grayish-blue);
+    line-height: 1.7;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.text-center {
+    text-align: center;
+}
+.text-large {
+    font-size: clamp(2.125rem, 2.5rem, 4rem);
+}
+/* ?STYLES FOR THE BUTTON ELEMENT */
+button {
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s cubic-bezier(.17, .67, .83, .67);
+}
+button.primary {
+    background-color: var(--bright-red);
+    color: var(--very-light-gray);
+    box-shadow: hsla(12, 88%, 59%, 0.721) 0px 15px 20px -10px;
+
+    &:active {
+        background-color: hsla(12, 88%, 59%, 0.817);
+    }
+}
+button.secondary {
+    background-color: var(--very-light-gray);
+    color: var(--bright-red);
+    
+    &:active {
+        color: hsla(12, 88%, 59%, 0.619);
+    }
+}
+/* ?SETTING MAXIMUM WIDTHS */
+.content-container,
+header>nav {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+/* ?STYLING THE HERO SECTION OF THE PAGE */
+#hero {
+    background-image: url("images/bg-tablet-pattern.svg");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: top -20% right 250%;
+}
+header {
+    padding-block: 2rem;
+    & nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 32px;
+        & img#logo {
+            width: 120px;
+        }
+        & ion-icon {
+            color: var(--dark-blue);
+        }
+    }
+}
+#hero-content {
+    & img:not(.hero-content-bg) {
+        width: 100%;
+    }
+
+    & .hero-content-text {
+        position: relative;
+        padding-bottom: 6rem;
+        & img {
+            position: absolute;
+            inset: auto -45% 0 auto;
+            width: 80%;
+            z-index: -1;
+        }
+    }
+    & p {
+        margin-block: 1rem 2rem;
+    }
+}
+/* ?STYLING THE ABOUT SECTION OF THE PAGE */
+#about-content {
+    padding-bottom: 4rem;
+    & .about-content-intro {
+        & p {
+            margin-top: 1.25rem;
+        }
+    }
+
+    & .content-point {
+        margin-top: 3rem;
+
+        & .point-heading {
+            width: 110%;
+            display: flex;
+            align-items: center;
+            gap: .625rem;
+            margin-bottom: 1rem;
+            font-size: clamp(.8rem, 1rem, 2rem);
+            font-weight: 500;
+            background-color: var(--very-pale-red);
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+
+            & span {
+                background-color: var(--bright-red);
+                color: var(--very-light-gray);
+                padding: 1rem 2rem;
+                border-radius: 2rem;
+            }
+        }
+    }
+}
+/* ?STYLING THE TESTIMONIALS SECTION OF THE PAGE */
+#testimonials-content {
+    padding-bottom: 2.5rem;
+    & .testimonials {
+        margin-block: 6rem 4rem;
+        & .testimonial {
+            position: relative;
+            background-color: var(--very-light-gray);
+            padding: 3.5rem 2rem 3rem;
+
+            &:not(:first-child) {
+                margin-top: 3.5rem;
+            }
+
+            & img {
+                width: 70px;
+                position: absolute;
+                inset: -35px 50% auto 50%;
+                transform: translateX(-50%);
+            }
+            & p.name {
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+/* ?STYLING THE SIMPLIFY SECTION OF THE PAGE */
+#simplify {
+    background-color: var(--bright-red);
+    background-image: url("images/bg-simplify-section-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: bottom 50% left;
+    padding-block: 6rem 5rem;
+    & #simplify-content {
+        padding-inline: 2.25rem;
+        & h2 {
+            color: var(--very-light-gray);
+            margin-bottom: 2rem;
+        }
+    }
+}
+/* ?STYLING THE FOOTER */
+#footer {
+    background-color: var(--very-dark-blue);
+    color: var(--very-light-gray);
+    padding-block: 2.5rem 2rem;
+    #footer-content {
+        width: 90%;
+        margin-inline: auto;
+        & .email {
+            display: flex;
+            gap: .625rem;
+            & input {
+                flex: 1;
+                border: none;
+                border-radius: 2rem;
+                padding: 1rem;
+                color: var(--bright-red);
+                &:focus {
+                    outline: 1.5px solid var(--bright-red);
+                }
+            }
+            & button {
+                box-shadow: none;
+            }
+        }
+        & .footer-nav-links {
+            padding-inline: 2.125rem;
+            margin-block: 2rem;
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            & a {
+                transition: .3s ease;
+                &:active {
+                    color: var(--bright-red);
+                }
+            }
+        }
+        & .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin-bottom: 3.5rem;
+
+            & .socials {
+                font-size: 40px;
+                display: flex;
+                justify-content: space-between;
+                & ion-icon {
+                    cursor: pointer;
+                    transition: .3s ease;
+                    &:active {
+                        color: var(--bright-red);
+                    }
+                }
+            }
+        }
+    }
 }

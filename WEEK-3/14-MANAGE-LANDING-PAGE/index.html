@@ -14,12 +14,132 @@
   <!-- ?ADDING DOCUMENT FONTS FROM GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- ?LINKING TO THE STYLESHEET -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- ?THE MAIN CONTENT OF THE PAGE -->
-  <main></main>
+  <main>
+    <!-- ?THE HERO SECTION -->
+    <section id="hero">
+      <!-- ?THE HEADER -->
+      <header>
+        <nav>
+          <a><img id="logo" src="images/logo.svg" alt="Website Logo"></a>
+          <a><ion-icon name="menu" aria-label="menu"></ion-icon></a>
+        </nav>
+      </header>
+      <!-- ?MAIN CONTENT OF THE HERO SECTION -->
+      <section id="hero-content" class="content-container text-center">
+        <img src="images/illustration-intro.svg" alt="Intro Illustration">
+        <div class="hero-content-text">
+          <h1 class="text-large">Bring everyone together to build better products.</h1>
+          <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.</p>
+          <button class="primary">Get Started</button>
+          <img class="hero-content-bg" src="images/bg-tablet-pattern.svg" alt="Background Pattern">
+        </div>
+      </section>
+    </section>
+    <!-- ?THE ABOUT SECTION -->
+    <section id="about">
+      <section id="about-content" class="content-container">
+        <div class="about-content-intro text-center">
+          <h2>What's different about Manage?</h2>
+          <p>Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.</p>
+        </div>
+        <div class="about-content-points">
+          <div class="content-point">
+            <div class="point-heading">
+              <span>01</span>
+              <h3>Track company-wide progress</h3>
+            </div>
+            <p>See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way down to the smallest of details. Never lose sight of the bigger picture again.</p>
+          </div>
+          <div class="content-point">
+            <div class="point-heading">
+              <span>02</span>
+              <h3>Advanced built-in reports</h3>
+            </div>
+            <p>Set internal delivery estimates and track progress toward company goals. Our customizable dashboard helps you build out the reports you need to keep key stakeholders informed.</p>
+          </div>
+          <div class="content-point">
+            <div class="point-heading">
+              <span>03</span>
+              <h3>Everything you need in one place</h3>
+            </div>
+            <p>Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- ?THE TESTIMONIALS SECTION -->
+    <section id="testimonials">
+      <section id="testimonials-content" class="content-container text-center">
+        <h2>What they've said</h2>
+        <section class="testimonials">
+          <div class="testimonial">
+            <img src="images/avatar-anisha.png" alt="Avatar of Anisha Li">
+            <p class="name">Anisha Li</p>
+            <p>"Manage has supercharged our team's workflow. Maintaining visibility on larger milestones at all times keeps everyone motivated."</p>
+          </div>
+          <div class="testimonial">
+            <img src="images/avatar-ali.png" alt="Avatar of Ali Bravo">
+            <p class="name">Ali Bravo</p>
+            <p>"We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused."</p>
+          </div>
+          <div class="testimonial">
+            <img src="images/avatar-richard.png" alt="Avatar of Richard Watts">
+            <p class="name">Richard Watts</p>
+            <p>"Manage allows us to provide structure and also keeps us organized and focused. I can't stop recommending them to everyone I talk to!"</p>
+          </div>
+        </section>
+        <button class="primary">Get Started</button>
+      </section>
+    </section>
+    <!-- ?THE SIMPLIFY SECTION -->
+    <section id="simplify">
+      <section id="simplify-content" class="content-container text-center">
+        <h2 class="text-large">Simplify how your team works today.</h2>
+        <button class="secondary">Get Started</button>
+      </section>
+    </section>
+  </main>
+  <!-- ?THE FOOTER -->
+  <footer  id="footer">
+    <section id="footer-content" class="content-container">
+      <div class="email">
+        <input type="email" placeholder="Updates in your inbox..." id="email-address">
+        <button class="primary">GO</button>
+      </div>
+
+      <div class="footer-nav-links">
+        <a>Home</a>
+        <a>Careers</a>
+        <a>Pricing</a>
+        <a>Community</a>
+        <a>Products</a>
+        <a>Privacy Policy</a>
+        <a>About Us</a>
+      </div>
+
+      <div class="footer-links text-center">
+        <div class="socials">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-youtube"></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+          <ion-icon name="logo-pinterest"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+        <a><img id="logo" src="images/logo-footer.svg" alt="Website Logo"></a>
+      </div>
+
+      <p class="text-center">Copyright 2020. All Rights Reserved</p>
+    </section>
+  </footer>
+
+  <!-- ?IONIC ICONS -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
