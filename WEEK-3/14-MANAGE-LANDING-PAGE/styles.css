@@ -5,22 +5,17 @@
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
-/* ?DOCUMENT COLORS */
-:root {
-    /* PRIMARY */
+:root { /* ?DOCUMENT COLORS */
     --bright-red: hsl(12, 88%, 59%);
     --dark-blue: hsl(228, 39%, 23%);
-    /* NEUTRAL */
     --dark-grayish-blue: hsl(227, 12%, 61%);
     --very-dark-blue: hsl(233, 12%, 13%);
     --very-pale-red: hsl(13, 100%, 96%);
     --very-light-gray: hsl(0, 0%, 98%);
 }
-/* ?STYLING THE BODY */
-body {
+body { /* ?STYLING THE BODY */
     width: 100%;
     min-height: 100vh;
-    /* background-color: var(--very-light-gray); */
     overflow-x: hidden;
 }
 /* ?COLORS FOR THE H1 AND H2 ELEMENTS */
@@ -42,7 +37,7 @@ a {
 .text-center {
     text-align: center;
 }
-.text-large {
+.text-large { /* The h1 element and the text at the simplify section */
     font-size: clamp(2.125rem, 2.5rem, 4rem);
 }
 /* ?STYLES FOR THE BUTTON ELEMENT */
@@ -58,16 +53,14 @@ button.primary {
     background-color: var(--bright-red);
     color: var(--very-light-gray);
     box-shadow: hsla(12, 88%, 59%, 0.721) 0px 15px 20px -10px;
-
-    &:active {
+    &:active { /* When the primary button is clicked */
         background-color: hsla(12, 88%, 59%, 0.817);
     }
 }
 button.secondary {
     background-color: var(--very-light-gray);
     color: var(--bright-red);
-    
-    &:active {
+    &:active { /* When the secondary button is clicked */
         color: hsla(12, 88%, 59%, 0.619);
     }
 }
@@ -85,15 +78,17 @@ header > nav {
     background-repeat: no-repeat;
     background-position: top -20% right 250%;
 }
-header {
+header { /* The navigation bar */
     padding-block: 2rem;
-    & nav.desktop {
+    & nav {
+        justify-content: space-between;
+        align-items: center;
+    }
+    & nav.desktop { /* Making the desktop nav invisible on mobile screens */
         display: none;
     }
     & nav.mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         font-size: 32px;
         & img#logo {
             width: 120px;
@@ -107,19 +102,18 @@ header {
     & img:not(.hero-content-bg) {
         width: 100%;
     }
-
-    & .hero-content-text {
+    & .hero-content-text { /* The text in the hero section of the page */
         position: relative;
         padding-bottom: 6rem;
-        & img {
+        & img { /* The background image in the hero */
             position: absolute;
             inset: auto -45% 0 auto;
             width: 80%;
             z-index: -1;
         }
-    }
-    & p {
-        margin-block: 1rem 2rem;
+        & p {
+            margin-block: 1rem 2rem;
+        }
     }
 }
 /* ?STYLING THE ABOUT SECTION OF THE PAGE */
@@ -130,10 +124,8 @@ header {
             margin-top: 1.25rem;
         }
     }
-
-    & .content-point {
+    & .content-point { /* Each point in the about section */
         margin-top: 3rem;
-
         & .point-heading {
             width: 110%;
             display: flex;
@@ -145,8 +137,7 @@ header {
             background-color: var(--very-pale-red);
             border-top-left-radius: 2rem;
             border-bottom-left-radius: 2rem;
-
-            & span {
+            & span { /* The number indicator for each point in the about section */
                 background-color: var(--bright-red);
                 color: var(--very-light-gray);
                 padding: 1rem 2rem;
@@ -158,6 +149,9 @@ header {
 /* ?STYLING THE TESTIMONIALS SECTION OF THE PAGE */
 #testimonials-content {
     padding-bottom: 2.5rem;
+    & .testimonials-content-bg { /* Hiding the background of the desktop screen */
+        display: none;
+    }
     & .testimonials {
         margin-block: 6rem 4rem;
         display: flex;
@@ -167,8 +161,7 @@ header {
             position: relative;
             background-color: var(--very-light-gray);
             padding: 3.5rem 2rem 3rem;
-
-            & img {
+            & img { /* The profile photos of each testimonial */
                 width: 70px;
                 position: absolute;
                 inset: -35px 50% auto 50%;
@@ -205,20 +198,25 @@ header {
         width: 90%;
         margin-inline: auto;
         & .email {
-            display: flex;
-            gap: .625rem;
-            & input {
-                flex: 1;
-                border: none;
-                border-radius: 2rem;
-                padding: 1rem;
-                color: var(--bright-red);
-                &:focus {
-                    outline: 1.5px solid var(--bright-red);
+            & .email-content {
+                display: flex;
+                gap: .625rem;
+                & input {
+                    flex: 1;
+                    border: none;
+                    border-radius: 2rem;
+                    padding: 1rem;
+                    color: var(--bright-red);
+                    &:focus { /* When the input is in focus */
+                        outline: 1.5px solid var(--bright-red);
+                    }
+                }
+                & button {
+                    box-shadow: none;
                 }
             }
-            & button {
-                box-shadow: none;
+            & p.text-center.desktop { /* Hiding the desktop copyright text */
+                display: none;
             }
         }
         & .footer-nav-links {
@@ -229,7 +227,7 @@ header {
             grid-template-columns: repeat(2, 1fr);
             & a {
                 transition: .3s ease;
-                &:active {
+                &:active { /* When each link is clicked */
                     color: var(--bright-red);
                 }
             }
@@ -239,8 +237,7 @@ header {
             flex-direction: column;
             gap: 3rem;
             margin-bottom: 3.5rem;
-
-            & .socials {
+            & .socials { /* The social icons */
                 font-size: 40px;
                 display: flex;
                 justify-content: space-between;
@@ -256,15 +253,13 @@ header {
     }
 }
 /* ?MAKING THE DESIGN RESPONSIVE */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     header {
         & nav.mobile {
             display: none;
         }
         & nav.desktop {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
             & ul {
                 display: flex;
                 gap: 1.5rem;
@@ -279,6 +274,10 @@ header {
                 }
             }
         }
+    }
+    #hero {
+        background-size: 50%;
+        background-position: top -30% right -10%;
     }
     #hero-content {
         display: flex;
@@ -297,9 +296,20 @@ header {
             & p {
                 max-width: 62%;
             }
+            & img {
+                display: none;
+            }
         }
     }
     #testimonials-content {
+        position: relative;
+        & .testimonials-content-bg {
+            display: block;
+            position: absolute;
+            width: 60%;
+            inset: -55% auto auto -40%;
+
+        }
         & .testimonials {
             flex-direction: row;
         }
@@ -313,10 +323,66 @@ header {
             text-align: start;
         }
         & .content-point {
-            margin: 0;
+            &:first-child {
+                margin: 0;
+            }
             & .point-heading {
                 width: 100%;
                 background-color: unset;
+            }
+        }
+    }
+    #simplify {
+        background-image: url("images/bg-simplify-section-desktop.svg");
+        padding-block: 3rem;
+        & #simplify-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & .text-large {
+                text-align: start;
+                max-width: 50%;
+            }
+        }
+    }
+    #footer {
+        & #footer-content {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            width: 100%;
+            padding-block: 2.5rem 3.5rem;
+            & .footer-links {
+                order: 1;
+                align-items: start;
+                flex-direction: column-reverse;
+                gap: 5rem;
+                margin: 0;
+                & .socials {
+                    font-size: 32px;
+                    gap: 1rem;
+                }
+                & img#logo {
+                    width: 200px;
+                }
+            }
+            & .footer-nav-links {
+                order: 2;
+                margin: 0;
+                padding: 0;
+            }
+            & .email {
+                order: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 5rem;
+                & p.text-center.desktop { /* Making the desktop copyright text visible */
+                    display: block;
+                }
+            }
+            & p.text-center.mobile { /* Removing the mobile copyright text */
+                display: none;
             }
         }
     }
