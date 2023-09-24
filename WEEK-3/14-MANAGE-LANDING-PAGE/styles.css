@@ -54,14 +54,14 @@ button.primary {
     color: var(--very-light-gray);
     box-shadow: hsla(12, 88%, 59%, 0.721) 0px 15px 20px -10px;
     &:active { /* When the primary button is clicked */
-        background-color: hsla(12, 88%, 59%, 0.817);
+        background-color: hsla(12, 88%, 59%, 0.65);
     }
 }
 button.secondary {
     background-color: var(--very-light-gray);
     color: var(--bright-red);
     &:active { /* When the secondary button is clicked */
-        color: hsla(12, 88%, 59%, 0.619);
+        color: hsla(12, 88%, 59%, 0.6);
     }
 }
 /* ?SETTING MAXIMUM WIDTHS */
@@ -195,18 +195,17 @@ header { /* The navigation bar */
     color: var(--very-light-gray);
     padding-block: 2.5rem 2rem;
     #footer-content {
-        width: 90%;
-        margin-inline: auto;
+        padding-inline: 2.25rem;
         & .email {
             & .email-content {
                 display: flex;
                 gap: .625rem;
                 & input {
-                    flex: 1;
                     border: none;
                     border-radius: 2rem;
                     padding: 1rem;
                     color: var(--bright-red);
+                    font-weight: 500;
                     &:focus { /* When the input is in focus */
                         outline: 1.5px solid var(--bright-red);
                     }
@@ -276,8 +275,8 @@ header { /* The navigation bar */
         }
     }
     #hero {
-        background-size: 50%;
-        background-position: top -30% right -10%;
+        background-size: 700px;
+        background-position: top -150px right -180px;
     }
     #hero-content {
         display: flex;
