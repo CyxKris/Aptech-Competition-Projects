@@ -14,8 +14,6 @@
     --very-light-gray: hsl(0, 0%, 98%);
 }
 body { /* ?STYLING THE BODY */
-    width: 100%;
-    min-height: 100vh;
     overflow-x: hidden;
 }
 /* ?COLORS FOR THE H1 AND H2 ELEMENTS */
