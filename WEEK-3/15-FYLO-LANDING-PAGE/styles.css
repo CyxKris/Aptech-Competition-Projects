@@ -22,7 +22,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
 }
-header, h1, h2 button {
+header, h1, h2, button, .cta {
     font-family: 'Raleway', sans-serif;
 }
 header > nav, .content-container {
@@ -48,7 +48,7 @@ header > nav, .content-container {
         }
     }
     & #hero-content {
-        padding-block: 4rem 3.5rem;
+        padding-block: 4rem 7.5rem;
         color: var(--very-dark-blue);
         & img {
             width: 100%;
@@ -77,6 +77,69 @@ header > nav, .content-container {
                     background-color: var(--bright-blue);
                     color: var(--light-gray);
                     border: none;
+                }
+            }
+        }
+    }
+}
+#about {
+    background-color: var(--light-grayish-blue);
+    position: relative;
+    & .about-bg {
+        position: absolute;
+        inset: -40px auto auto auto;
+        width: 100%;
+    }
+    & #about-content {
+        padding-block: 5rem;
+        & > img {
+            width: 100%;
+        }
+        & .about-info {
+            padding-block: 5rem 3rem;
+            & h2 {
+                text-align: center;
+                font-size: 1.125rem;
+                margin-bottom: 1rem;
+            }
+            & p:nth-child(2) {
+                margin-bottom: 1rem;
+            }
+        }
+        & .cta {
+            width: 60%;
+            margin-inline: auto;
+            border-bottom: 1px solid var(--moderate-cyan);
+            display: flex;
+            align-items: center;
+            gap: .2rem;
+            color: var(--moderate-cyan);
+            font-weight: 700;
+        }
+        & .testimonial {
+            width: 90%;
+            margin-top: 2rem;
+            margin-inline: auto;
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.25rem;
+            & .person {
+                margin-top: 1rem;
+                display: flex;
+                align-items: end;
+                gap: .5rem;
+                & img {
+                    width: 38px;
+                    height: 38px;
+                    border-radius: 50%;
+                    margin-top: 1rem;
+                }
+                & div {
+                    font-size: .875rem;
+                    & p.name {
+                        font-weight: 700;
+                        color: var(--very-dark-blue);
+                    }
                 }
             }
         }
