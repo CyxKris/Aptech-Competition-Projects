@@ -60,6 +60,7 @@ body {
 }
 /* ?STYLING THE HERO SECTION OF THE PAGE */
 #hero {
+    /* ?STYLES FOR THE HEADER NAVIGATION */
     & header {
         & nav {
             display: flex;
@@ -76,6 +77,7 @@ body {
             }
         }
     }
+    /* ?STYLES FOR THE ACTUAL CONTENT OF THE HERO SECTION */
     & #hero-content {
         padding-block: 4rem 7.5rem;
         color: var(--very-dark-blue);
@@ -130,6 +132,7 @@ body {
 }
 /* ?STYLING THE ABOUT SECTION OF THE PAGE */
 #about {
+    /* ?SETTING UP THE BACKGROUND OF THE ABOUT SECTION */
     background-color: var(--light-grayish-blue);
     position: relative;
     & .about-bg {
@@ -141,6 +144,7 @@ body {
             inset: -150px auto auto auto;
         }
     }
+    /* ?THE ACTUAL CONTENT OF THE ABOUT SECTION */
     & #about-content {
         padding-block: 5rem;
         & > img {
@@ -165,6 +169,12 @@ body {
             gap: .2rem;
             color: var(--moderate-cyan);
             font-weight: 700;
+            cursor: pointer;
+            transition: .2s ease;
+            &:active {
+                color: hsl(170, 77%, 66%);
+                border-bottom: 1px solid hsl(170, 77%, 66%);
+            }
         }
         & .testimonial {
             width: 90%;
@@ -223,9 +233,11 @@ body {
 }
 /* ?STYLING THE SIGN-UP SECTION OF THE PAGE */
 #sign-up {
+    /* ?SETTING UP THE BACKGROUND AND PADDING OF THE SIGN-UP SECTION */
     background-color: var(--desaturated-blue);
     color: #FFF;
     padding: 3rem 1rem 3.5rem;
+    /* ?THE ACTUAL SIGN-UP CONTENT */
     & #sign-up-content {
         text-align: center;
         & p {
@@ -263,9 +275,11 @@ body {
 }
 /* ?STYLING THE FOOTER OF THE PAGE */
 #footer {
+    /* ?SETTING UP THE BACKGROUND AND PADDING OF THE FOOTER SECTION */
     background-color: var(--very-dark-blue);
     color: #FFF;
     padding: 3rem 1rem;
+    /* ?THE ACTUAL CONTENT OF THE FOOTER */
     & #footer-content {
         & .footer-logo {
             margin-bottom: 2rem;
